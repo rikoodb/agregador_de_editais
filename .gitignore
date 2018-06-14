@@ -5,10 +5,10 @@ __pycache__/
 *.db
 *.swp
 settings.ini
-
+/static
 # C extensions
+.vscode
 *.so
-
 # Distribution / packaging
 .Python
 build/
