@@ -14,11 +14,12 @@ Esse projeto, foi uma ideia que tive ao trabalhar no Laboratório de Inovação 
  - virtualenv --python=python3 env  --no-site-packages
  - source env/bin/activate
 
- Encontrou algum erro relacionado a "failed twisted" na instalação do scrapy? Instale as dependências necessárias para o seu S.O em :
- https://doc.scrapy.org/en/latest/intro/install.html
 
 agregador_de_editais/
  - pip install -r requirements.txt para instalar as dependências do projeto
+
+Encontrou algum erro relacionado a "failed twisted" na instalação do scrapy? Instale as dependências necessárias para o seu S.O em :
+ https://doc.scrapy.org/en/latest/intro/install.html
 
 ## Itens necessários:
 O .gitignore vai ignorar o banco de dados e o settings.ini do projeto. Nesse caso, é necessário criá-los.
