@@ -14,6 +14,9 @@ Esse projeto, foi uma ideia que tive ao trabalhar no Laboratório de Inovação 
  - virtualenv --python=python3 env  --no-site-packages
  - source env/bin/activate
 
+ Encontrou algum erro relacionado a "failed twisted" na instalação do scrapy? Instale as dependências necessárias para o seu S.O em :
+ https://doc.scrapy.org/en/latest/intro/install.html
+
 agregador_de_editais/
  - pip install -r requirements.txt para instalar as dependências do projeto
 
@@ -29,7 +32,7 @@ agregador_de_editais/projeto_parser_inovacao/spiders
         [settings]
     	REMETENTE=colocar_o_email_aqui
     	SENHA=colocar_a_senha_aqui
-        BANCO_DADOS=caminho_do_bd_aqui
+        BANCO_DADOS=caminho/banco_dados.db
 
  Para o banco de dados :
   
