@@ -6,20 +6,18 @@ conn = sqlite3.connect(settings.BANCO_DADOS)
 cursor = conn.cursor()
 
 
-cursor.execute("""CREATE TABLE edital
-                       (id_edital INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-                        url VARCHAR(100) NOT NULL, data_publicacao VARCHAR(80),
-                        data_prazo_envio VARCHAR(80), titulo VARCHAR(80));
+cursor.execute("""CREATE TABLE IF NOT EXISTS "edital" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
+                "data_publicacao" varchar(30) NULL, "data_prazo_envio" varchar(30) NULL, 
+                "titulo" varchar(30) NULL, "url" varchar(30) NULL);
                """)
 conn.commit()
 
 
-cursor.execute("""CREATE TABLE usuario
-                       (id_usuario INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-                        nome VARCHAR(80) NOT NULL, email VARCHAR(80) NOT NULL);
+cursor.execute("""CREATE TABLE IF NOT EXISTS "usuario" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
+                "nome" varchar(30) NOT NULL, "email" varchar(50) NOT NULL);
+
                """)
 conn.commit()
-
 
 cursor.execute("""CREATE TABLE usuario_edital
                        (usuario_id INTEGER NOT NULL,

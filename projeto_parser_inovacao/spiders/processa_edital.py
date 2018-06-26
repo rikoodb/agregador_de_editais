@@ -63,14 +63,15 @@ def envia_mensagem_email(conn, cursor):
         cnpq = []
 
         for edital in editais:
-            id_edital, edital_link, edital_data_publicacao, edital_data_prazo_envio, edital_titulo = edital
-
+            id_edital, edital_data_publicacao, edital_data_prazo_envio, edital_titulo,  edital_link  = edital
+           
             if 'capes' in edital_link:
                 capes.append({'titulo': edital_titulo, 'link': edital_link})
             elif 'cnpq' in edital_link:
                 cnpq.append({'titulo': edital_titulo, 'link': edital_link})
             elif 'finep' in edital_link:
                 finep.append({'titulo': edital_titulo, 'link': edital_link})
+    
 
         input = open("components.html", "r")
         arquivo = input.read()

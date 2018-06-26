@@ -20,20 +20,7 @@ agregador_de_editais/
 ## Itens necessários:
 O .gitignore vai ignorar o banco de dados e o settings.ini do projeto. Nesse caso, é necessário criá-los.
 
- Para o banco de dados :
-  
-agregador_de_editais/projeto_parser_inovacao/spiders
-
-     python migrate.py
- 
- É necessário cadastrar pelo menos um email para o script enviar os editais :
- 
-    sqlite3 banco_dados.py
-    INSERT INTO usuario (nome,email) VALUES ('nome_aqui', 'email_aqui');
-    .exit
-
-
- Para o settings :
+Para o settings :
 
 agregador_de_editais/projeto_parser_inovacao/spiders
 
@@ -42,6 +29,22 @@ agregador_de_editais/projeto_parser_inovacao/spiders
         [settings]
     	REMETENTE=colocar_o_email_aqui
     	SENHA=colocar_a_senha_aqui
+        BANCO_DADOS=caminho_do_bd_aqui
+
+ Para o banco de dados :
+  
+agregador_de_editais/projeto_parser_inovacao/spiders
+
+     python migrate.py
+ 
+ É necessário cadastrar pelo menos um email para o script enviar os editais :
+
+ Caminho_do_db/
+ 
+    sqlite3 banco_dados.py
+    INSERT INTO usuario (nome,email) VALUES ('nome_aqui', 'email_aqui');
+    .exit
+
 
 O script está configurado para receber um email da outlook. Caso queira mudar, vá até o arquivo "processa_edital.py", função "envia_email()" e altere  "server = smtplib.SMTP('smtp-mail.outlook.com', '587')":
  
