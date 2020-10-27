@@ -1,7 +1,7 @@
 asn1crypto==0.24.0
 cffi==1.11.4
 constantly==15.1.0
-cryptography==2.1.4
+cryptography==3.2
 cssselect==1.0.3
 flake8==3.5.0
 idna==2.6
